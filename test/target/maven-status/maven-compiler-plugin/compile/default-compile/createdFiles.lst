@@ -1,0 +1,6 @@
+com/example/demo/controller/MainController.class
+com/example/demo/model/StockInfo.class
+com/example/demo/DemoApplication.class
+com/example/demo/controller/StockController.class
+com/example/demo/controller/UserController.class
+com/example/demo/model/StockType.class

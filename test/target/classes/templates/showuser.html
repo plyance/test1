@@ -1,0 +1,19 @@
+
+<html>
+<body>
+
+<table>
+    <tr><th>用户序号</th><th>用户名</th></tr>
+    <tr th:each="i:${info}">
+        <td th:text="${i.uid}"></td>
+        <td th:text="${i.uname}"></td>
+        
+        
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>

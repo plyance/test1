@@ -1,0 +1,20 @@
+<html>
+<body>
+
+<table>
+   
+    <tr><th>宿舍</th><th>人员</th></tr>
+    
+    <tr th:each="i:${info}">
+        <td th:text="${i.good_name}  "></td>
+        <td th:text="${i.uname}"></td>
+        
+     
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>

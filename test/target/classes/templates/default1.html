@@ -1,0 +1,58 @@
+<html>
+<head></head>
+
+<body background="https://i.loli.net/2020/12/11/uW9DZyOTxqY7cE8.png">
+    
+欢迎用户<a th:text="${uid}"></a>!&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp现在是：
+
+<span id="time"></span>
+		
+		<script>
+			var show= function(){
+				var date = new Date();
+				var year = date.getFullYear();
+				var month = date.getMonth()+1;
+				month= month<10?"0"+month:month;
+				var day = date.getDate();//获取日期
+				day= day<10?"0"+day:day;
+				var hour = date.getHours();
+				hour= hour<10?"0"+hour:hour;
+				var minute = date.getMinutes();
+				minute= minute<10?"0"+minute:minute;
+				var week = date.getDay();//获取星期
+				var second=date.getSeconds();
+				second= second<10?"0"+second:second;
+				week = "日一二三四五六".charAt(week);
+				week="星期"+week;
+				result=year+"-"+month+"-"+day+" "+week+" "+hour+":"+minute+":"+second;
+				document.getElementById("time").innerHTML=result;
+		 }
+			show();
+			setInterval("show()",1000);
+		</script>
+
+<table border="1">
+
+<tr>
+<td style="vertical-align: top;">
+<div>
+    <ul>
+        <li><a href="addstock.html" target="iframe_a">添加宿舍</a></li>
+        <li><a href="showstock.html" target="iframe_a">查看楼区信息</a></li>
+      
+        <li><a href="addtype_user.html" target="iframe_a">添加宿舍楼区</a></li>
+        <li><a href="showuser_user.html" target="iframe_a">查看管理用户</a></li>
+        
+        
+    </ul>
+</div>
+</td>
+<td>
+<iframe src="welcome.html" name="iframe_a" frameborder="0" width="1366" height="768">
+</iframe>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

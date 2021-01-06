@@ -1,0 +1,18 @@
+<html>
+<body>
+
+<table>
+    <tr><th>宿舍楼</th><th>宿舍</th><th>&nbsp&nbsp&nbsp人员</th></tr>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <tr th:each="i:${info}">
+        <td th:text="${i.good_name}"></td>
+        <td th:text="${i.type_name}"></td>
+        <td th:text="${i.count}"></td>
+        <td><a th:href="@{update(aa=${i.good_name})}">修改人员</a></td>
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>

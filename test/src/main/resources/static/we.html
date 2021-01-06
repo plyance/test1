@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			span{
+				display: inline-block;
+				/*border: 1px solid black;*/
+				/*background-color: yellow;*/
+				font-family: 华文行楷;
+			}
+			span:hover{
+				background-color: pink;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="time"></span>
+		
+		<script>
+			var show= function(){
+				var date = new Date();
+				var year = date.getFullYear();
+				var month = date.getMonth()+1;
+				month= month<10?"0"+month:month;
+				var day = date.getDate();//获取日期
+				day= day<10?"0"+day:day;
+				var hour = date.getHours();
+				hour= hour<10?"0"+hour:hour;
+				var minute = date.getMinutes();
+				minute= minute<10?"0"+minute:minute;
+				var week = date.getDay();//获取星期
+				var second=date.getSeconds();
+				second= second<10?"0"+second:second;
+				week = "日一二三四五六".charAt(week);
+				week="星期"+week;
+				result=year+"-"+month+"-"+day+" "+week+" "+hour+":"+minute+":"+second;
+				document.getElementById("time").innerHTML=result;
+		 }
+			show();
+			setInterval("show()",1000);
+		</script>
+	</body>
+</html>
